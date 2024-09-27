@@ -1,0 +1,5 @@
+#Program to read from a csv file 
+#and create a dataframe from it
+import pandas as pd
+edf=pd.read_csv("Location of CSV File")
+print(edf)
