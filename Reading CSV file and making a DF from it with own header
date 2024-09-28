@@ -1,0 +1,5 @@
+#Program to read from a csv file and create a dataframe from it but dataframe should not use files column header rather
+#use our own column headers 0,1,2,3
+import pandas as pd
+edf=pd.read_csv("Location")
+print(edf)
