@@ -1,0 +1,4 @@
+#Program to read from a csv file and create a dataframe from it using name column as index labels
+import pandas as pd
+edf=pd.read_csv("Location",index_col="Name")
+print(edf)
