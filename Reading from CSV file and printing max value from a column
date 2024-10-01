@@ -1,0 +1,6 @@
+#Program to read from a csv file and create a dataframe from it but dataframe should not use csv file's column header 
+#rather should use our own column headings. Also print maximum salary.
+import pandas as pd
+edf=pd.read_csv("Location",names=['EmpId','EmpName','EmpDesig','EmpSal'],skiprows=1)
+print(edf)
+print("Maximum salary is",edf.EmpSal.max())
