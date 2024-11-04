@@ -1,0 +1,4 @@
+#Program to read from csv file where the separator is '|'  and give the appropriate column headings
+import pandas as pd
+deptdf=pd.read_csv("Location",sep='|',names=[Names of columns in CSV file])
+print(deptdf)
