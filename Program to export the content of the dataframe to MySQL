@@ -1,0 +1,13 @@
+#Program to export the content of the dataframe to MySQL
+import pandas as pd
+import numpy as np
+from sqlalchemy import create_engine
+d1={'Tutor':['Tahira','Guryjot','Anusha','Jacob','Venkat'],
+   'Classes':[28,np.NaN,41,np.NaN,40],
+   'Country':['USA','UK','Japan','India','Brazil']}
+dfd=pd.DataFrame(d1)
+print(dfd)
+engine=create_engine('mysql+pymysql:<location>')
+mycon=engine.connect()
+dfd.to_sql('tution',mycon,index=False,if_exists='replace')
+mycon.close()
