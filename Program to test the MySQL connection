@@ -1,0 +1,5 @@
+#Program to test the MySQL connection
+import mysql.connector as m
+mycon=m.connect(host='<name>',user='<name>',passwd='<name>',database=''<name>')
+if mycon.is_connected():
+    print("Success")
