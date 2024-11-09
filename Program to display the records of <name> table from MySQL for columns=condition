@@ -1,0 +1,10 @@
+#Program to display the records of <name> table from MySQL for columns=condition
+import pandas as pd
+import mysql.connector as m
+mycon=m.connect(host='<name>',user='<user>',passwd='<passwd>',database='<db>')
+if mycon.is_connected():
+    print("Employee details with deptno=20")
+    mdf=pd.read_sql("Select * from <table_name> where <column_name>=<condition>;",mycon)
+    print(mdf)
+else:
+    print("MySQL Connection Problem")
