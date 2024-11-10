@@ -1,0 +1,14 @@
+#Program to display the records from emp table who earns the salary in the given range both values included
+import pandas as pd
+import mysql.connector as m
+mycon=m.connect(host='<name>',user='<username>',passwd='<passwdd>',database='<name>')
+if mycon.is_connected():
+    <column1>=float(input("Enter starting value range:"))
+    <column2>=float(input("Enter ending value range:"))
+    query="select * from emp where <table with the float column> between %s and %s order by column;\
+    "%(column1,column2
+    mdf=pd.read_sql(query,mycon)
+    print(mdf)
+else:
+    print("MySQL Connection Problem")
+mycon.close()
